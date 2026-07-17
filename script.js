@@ -126,26 +126,45 @@ function crearTarjeta(color) {
     info.appendChild(textoHex);
     info.appendChild(textoHsl);
 
-const acciones = document.createElement("div");
-acciones.className = "color-actions";
+    const acciones = document.createElement("div");
+    acciones.className = "color-actions";
 
-const botonBloquear = document.createElement("button");
-botonBloquear.textContent = "🔒";
-botonBloquear.title = "Bloquear color";
+    const botonBloquear = document.createElement("button");
+    botonBloquear.textContent = "🔒";
+    botonBloquear.title = "Bloquear color";
 
-const botonCopiar = document.createElement("button");
-botonCopiar.textContent = "📋";
-botonCopiar.title = "Copiar código HEX";
+    const botonCopiar = document.createElement("button");
+    botonCopiar.textContent = "📋";
+    botonCopiar.title = "Copiar código HEX";
+    botonCopiar.addEventListener("click", function () {
 
-acciones.appendChild(botonBloquear);
-acciones.appendChild(botonCopiar);
+    navigator.clipboard.writeText(color.hex);
 
-info.appendChild(acciones);
+    mostrarToast("Código HEX copiado");
+
+    acciones.appendChild(botonBloquear);
+    acciones.appendChild(botonCopiar);
+
+    info.appendChild(acciones);
 
     tarjeta.appendChild(preview);
     tarjeta.appendChild(info);
 
     return tarjeta;
+
+}
+
+function mostrarToast(mensaje) {
+
+    toast.textContent = mensaje;
+
+    toast.classList.add("show");
+
+    setTimeout(function () {
+
+        toast.classList.remove("show");
+
+    }, 2000);
 
 }
 
