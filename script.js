@@ -40,11 +40,24 @@ function generarColor() {
 
     const l = Math.floor(Math.random() * 31) + 35;
 
-    const colorHSL = `hsl(${h}, ${s}%, ${l}%)`;
+    const hsl = `hsl(${h}, ${s}%, ${l}%)`;
 
-    return colorHSL;
+    const hex = hslToHex(h, s, l);
+
+    return {
+
+        hsl: hsl,
+
+        hex: hex,
+
+        bloqueado: false
+
+    };
 
 }
+
+
+
 
 
 
