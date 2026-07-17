@@ -263,3 +263,18 @@ select:focus{
     }
 
 }
+
+.color-actions button{
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+}
+
+.color-actions button:hover{
+
+    background-color: #f0f0f0;
+
+}
+

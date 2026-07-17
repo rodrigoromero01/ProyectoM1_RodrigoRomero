@@ -126,6 +126,22 @@ function crearTarjeta(color) {
     info.appendChild(textoHex);
     info.appendChild(textoHsl);
 
+const acciones = document.createElement("div");
+acciones.className = "color-actions";
+
+const botonBloquear = document.createElement("button");
+botonBloquear.textContent = "🔒";
+botonBloquear.title = "Bloquear color";
+
+const botonCopiar = document.createElement("button");
+botonCopiar.textContent = "📋";
+botonCopiar.title = "Copiar código HEX";
+
+acciones.appendChild(botonBloquear);
+acciones.appendChild(botonCopiar);
+
+info.appendChild(acciones);
+
     tarjeta.appendChild(preview);
     tarjeta.appendChild(info);
 
