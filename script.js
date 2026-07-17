@@ -1,3 +1,5 @@
+                // ===== ELEMENTOS DEL DOM  ===== //
+
 const botonGenerar = document.getElementById("generar");
 
 const selectorCantidad = document.getElementById("cantidad");
@@ -6,19 +8,28 @@ const contenedorPaleta = document.getElementById("paleta");
 
 const toast = document.getElementById("toast");
 
+                // ===== EVENTOS ===== //
+
 botonGenerar.addEventListener("click", generarPaleta);
 
-// ===== FUNCIONES =====
+  
+                // ===== FUNCIONES ===== //
 
 function generarPaleta() {
 
     contenedorPaleta.innerHTML = "";
 
-    const color = generarColor();
+    const cantidad = Number(selectorCantidad.value);
 
-    const tarjeta = crearTarjeta(color);
+    for (let i = 0; i < cantidad; i++) {
 
-    contenedorPaleta.appendChild(tarjeta);
+        const color = generarColor();
+
+        const tarjeta = crearTarjeta(color);
+
+        contenedorPaleta.appendChild(tarjeta);
+
+    }
 
 }
 
@@ -110,7 +121,7 @@ function crearTarjeta(color) {
     textoHex.textContent = `HEX: ${color.hex}`;
 
     const textoHsl = document.createElement("p");
-    textoHsl.textContent = `HSL: ${color.h}, ${color.s}%, ${color.l}%`;
+    textoHsl.textContent =  `HSL: ${color.h}°, ${color.s}%, ${color.l}%`;
 
     info.appendChild(textoHex);
     info.appendChild(textoHsl);
