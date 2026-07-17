@@ -137,9 +137,10 @@ function crearTarjeta(color) {
     botonCopiar.textContent = "📋";
     botonCopiar.title = "Copiar código HEX";
     botonCopiar.addEventListener("click", function () {
-        navigator.clipboard.writeText(color.hex);
-        mostrarToast("Tu código HEX ha sido copiado");
-    });
+
+    navigator.clipboard.writeText(color.hex);
+
+    mostrarToast("Código HEX copiado");
 
     acciones.appendChild(botonBloquear);
     acciones.appendChild(botonCopiar);
@@ -150,6 +151,7 @@ function crearTarjeta(color) {
     tarjeta.appendChild(info);
 
     return tarjeta;
+
 }
 
 function mostrarToast(mensaje) {
@@ -165,3 +167,7 @@ function mostrarToast(mensaje) {
     }, 2000);
 
 }
+
+
+
+
