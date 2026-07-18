@@ -36,6 +36,8 @@ function generarPaleta() {
 
     renderizarPaleta();
 
+     guardarPaleta();
+
 }
 
 function renderizarPaleta() {
@@ -151,17 +153,33 @@ function crearTarjeta(color) {
     const botonBloquear = document.createElement("button");
 
     const actualizarBotonBloqueo = () => {
-        botonBloquear.textContent = color.bloqueado ? "🔒" : "🔓";
-        botonBloquear.title = color.bloqueado ? "Desbloquear color" : "Bloquear color";
-    };
+            if (color.bloqueado) {
+
+        botonBloquear.textContent = "🔒";
+        botonBloquear.title = "Desbloquear color";
+
+    } else {
+
+        botonBloquear.textContent = "🔓";
+        botonBloquear.title = "Bloquear color";
+
+    }
+};
 
     actualizarBotonBloqueo();
 
+    
     botonBloquear.addEventListener("click", function (event) {
-        event.stopPropagation();
-        color.bloqueado = !color.bloqueado;
-        actualizarBotonBloqueo();
-    });
+
+    event.stopPropagation();
+
+    color.bloqueado = !color.bloqueado;
+
+    actualizarBotonBloqueo();
+
+    guardarPaleta();
+
+});
 
     const botonCopiar = document.createElement("button");
     botonCopiar.textContent = "📋";
@@ -185,6 +203,32 @@ function crearTarjeta(color) {
     return tarjeta;
 }
 
+function guardarPaleta() {
+
+    localStorage.setItem("paleta", JSON.stringify(paleta));
+
+}
+
+function cargarPaleta() {
+
+    const datosGuardados = localStorage.getItem("paleta");
+
+    if (datosGuardados) {
+
+        paleta = JSON.parse(datosGuardados);
+
+        selectorCantidad.value = paleta.length;
+
+        renderizarPaleta();
+
+    } else {
+
+        generarPaleta();
+
+    }
+
+}
+
 function mostrarToast(mensaje) {
 
     toast.textContent = mensaje;
@@ -198,6 +242,8 @@ function mostrarToast(mensaje) {
     }, 2000);
 
 }
+
+cargarPaleta();
 
 
 

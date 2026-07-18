@@ -1,20 +1,22 @@
-# Proyecto 1
-## Paletas de colores
-Repositorio del proyecto del modulo 1 de Henry, en el cual realizamos un selector de paletas de colores.
+# 🎨 Generador de Paletas de Colores
 
-## Indice
-- [comandos git](./readmes/)
+Proyecto realizado como MVP de una aplicación web para generar paletas de colores aleatorias.
 
+## Funcionalidades
 
+- Generación de paletas de 6, 8 o 9 colores.
+- Colores en formato HSL y HEX.
+- Copia del código HEX al portapapeles.
+- Bloqueo de colores individuales.
+- Microfeedback mediante toast.
+- Diseño responsive para escritorio.
+- Animaciones sutiles.
+- Despliegue con GitHub Pages.
 
-## Como usar
-1. jjjj
-2. dddd
-3. aaaa
+## Tecnologías
 
-## Estructura
-README.md
-readmes/
-index.html
-
-## Contribuir
+- HTML5
+- CSS3
+- JavaScript
+- Git
+- GitHub Pages
