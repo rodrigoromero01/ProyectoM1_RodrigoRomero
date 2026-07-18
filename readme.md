@@ -1,22 +1,95 @@
 # 🎨 Generador de Paletas de Colores
 
-Proyecto realizado como MVP de una aplicación web para generar paletas de colores aleatorias.
+Aplicación web desarrollada como MVP para generar paletas de colores aleatorias de forma rápida e intuitiva.
 
-## Funcionalidades
+El proyecto fue realizado utilizando HTML, CSS y JavaScript puro, aplicando manipulación del DOM, eventos, almacenamiento local y buenas prácticas básicas de desarrollo frontend.
+
+---
+
+## 🚀 Demo
+
+🔗 GitHub Pages:
+
+https://rodrigoromero01.github.io/ProyectoM1_RodrigoRomero/
+
+---
+
+## 📸 Captura de pantalla
+
+(Aquí podés agregar una imagen del proyecto)
+
+---
+
+## ✨ Funcionalidades
 
 - Generación de paletas de 6, 8 o 9 colores.
-- Colores en formato HSL y HEX.
-- Copia del código HEX al portapapeles.
-- Bloqueo de colores individuales.
-- Microfeedback mediante toast.
-- Diseño responsive para escritorio.
-- Animaciones sutiles.
-- Despliegue con GitHub Pages.
+- Colores mostrados en formato HSL y HEX.
+- Copiar el código HEX al portapapeles.
+- Bloqueo y desbloqueo de colores individuales.
+- Guardado automático de la última paleta mediante LocalStorage.
+- Microfeedback mediante Toast.
+- Animaciones sutiles al generar nuevas tarjetas.
+- Diseño orientado a escritorio.
 
-## Tecnologías
+---
+
+## 🛠️ Tecnologías utilizadas
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6)
 - Git
+- GitHub
 - GitHub Pages
+
+---
+
+## 📂 Estructura del proyecto
+
+```
+📁 GeneradorPaletas
+│
+├── index.html
+├── script.js
+├── README.md
+│
+└── css
+    └── styles.css
+```
+
+---
+
+## ▶️ Cómo ejecutar el proyecto
+
+1. Clonar el repositorio.
+
+```
+git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+```
+
+2. Abrir el archivo `index.html` en el navegador.
+
+O acceder directamente desde GitHub Pages.
+
+---
+
+## 📚 Conceptos aplicados
+
+Durante el desarrollo se trabajó con:
+
+- Manipulación del DOM.
+- Eventos.
+- Funciones.
+- Arrays y objetos.
+- LocalStorage.
+- JSON.stringify() y JSON.parse().
+- Clipboard API.
+- Animaciones con CSS.
+- HTML semántico.
+- Accesibilidad básica.
+
+---
+
+## 👨‍💻 Autor
+
+Rodrigo Romero
