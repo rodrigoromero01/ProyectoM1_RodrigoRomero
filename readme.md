@@ -64,7 +64,7 @@ https://rodrigoromero01.github.io/ProyectoM1_RodrigoRomero/
 1. Clonar el repositorio.
 
 ```
-git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+git clone https://github.com/rodrigoromero01/ProyectoM1_RodrigoRomero
 ```
 
 2. Abrir el archivo `index.html` en el navegador.
