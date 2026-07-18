@@ -141,16 +141,16 @@ function crearTarjeta(color) {
     const botonBloquear = document.createElement("button");
 
     const actualizarBotonBloqueo = () => {
-        botonBloquear.textContent = color.bloqueado ? "🔓" : "🔒";
+        botonBloquear.textContent = color.bloqueado ? "🔒" : "🔓";
         botonBloquear.title = color.bloqueado ? "Desbloquear color" : "Bloquear color";
     };
 
     actualizarBotonBloqueo();
 
-    botonBloquear.addEventListener("click", function () {
+    botonBloquear.addEventListener("click", function (event) {
+        event.stopPropagation();
         color.bloqueado = !color.bloqueado;
         actualizarBotonBloqueo();
-        generarPaleta();
     });
 
     const botonCopiar = document.createElement("button");
