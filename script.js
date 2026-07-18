@@ -8,6 +8,9 @@ const contenedorPaleta = document.getElementById("paleta");
 
 const toast = document.getElementById("toast");
 
+
+let paleta = [];
+
                 // ===== EVENTOS ===== //
 
 botonGenerar.addEventListener("click", generarPaleta);
@@ -15,21 +18,27 @@ botonGenerar.addEventListener("click", generarPaleta);
   
                 // ===== FUNCIONES ===== //
 
-function generarPaleta() {
+function generarPaleta(){
 
-    contenedorPaleta.innerHTML = "";
+    contenedorPaleta.innerHTML="";
 
     const cantidad = Number(selectorCantidad.value);
 
-    for (let i = 0; i < cantidad; i++) {
+    for(let i=0;i<cantidad;i++){
 
-        const color = generarColor();
+        if(!paleta[i] || !paleta[i].bloqueado){
 
-        const tarjeta = crearTarjeta(color);
+            paleta[i]=generarColor();
+
+        }
+
+        const tarjeta = crearTarjeta(paleta[i]);
 
         contenedorPaleta.appendChild(tarjeta);
 
     }
+
+    paleta.length = cantidad;
 
 }
 
@@ -130,8 +139,19 @@ function crearTarjeta(color) {
     acciones.className = "color-actions";
 
     const botonBloquear = document.createElement("button");
-    botonBloquear.textContent = "🔒";
-    botonBloquear.title = "Bloquear color";
+
+    const actualizarBotonBloqueo = () => {
+        botonBloquear.textContent = color.bloqueado ? "🔓" : "🔒";
+        botonBloquear.title = color.bloqueado ? "Desbloquear color" : "Bloquear color";
+    };
+
+    actualizarBotonBloqueo();
+
+    botonBloquear.addEventListener("click", function () {
+        color.bloqueado = !color.bloqueado;
+        actualizarBotonBloqueo();
+        generarPaleta();
+    });
 
     const botonCopiar = document.createElement("button");
     botonCopiar.textContent = "📋";
