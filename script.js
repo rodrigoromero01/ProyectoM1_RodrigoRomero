@@ -18,27 +18,37 @@ botonGenerar.addEventListener("click", generarPaleta);
   
                 // ===== FUNCIONES ===== //
 
-function generarPaleta(){
-
-    contenedorPaleta.innerHTML="";
+function generarPaleta() {
 
     const cantidad = Number(selectorCantidad.value);
 
-    for(let i=0;i<cantidad;i++){
+    for (let i = 0; i < cantidad; i++) {
 
-        if(!paleta[i] || !paleta[i].bloqueado){
+        if (!paleta[i] || !paleta[i].bloqueado) {
 
-            paleta[i]=generarColor();
+            paleta[i] = generarColor();
 
         }
+
+    }
+
+    paleta.length = cantidad;
+
+    renderizarPaleta();
+
+}
+
+function renderizarPaleta() {
+
+    contenedorPaleta.innerHTML = "";
+
+    for (let i = 0; i < paleta.length; i++) {
 
         const tarjeta = crearTarjeta(paleta[i]);
 
         contenedorPaleta.appendChild(tarjeta);
 
     }
-
-    paleta.length = cantidad;
 
 }
 
