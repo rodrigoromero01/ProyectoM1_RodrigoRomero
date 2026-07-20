@@ -16,7 +16,7 @@ https://rodrigoromero01.github.io/ProyectoM1_RodrigoRomero/
 
 ## 📸 Captura de pantalla
 
-(Aquí podés agregar una imagen del proyecto)
+![Vista previa de la página principal](assets/screenshot.png)
 
 ---
 
