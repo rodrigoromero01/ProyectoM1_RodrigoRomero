@@ -29,6 +29,34 @@ body {
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #1e2a38;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.title-word {
+    display: inline-block;
+    animation: floatTitle 2.8s ease-in-out infinite;
+}
+
+.title-word:nth-child(2n) {
+    animation-delay: 0.2s;
+}
+
+.title-word-accent {
+    color: #2f9e44;
+    text-shadow: 0 0 18px rgba(47, 158, 68, 0.18);
+}
+
+.title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.2rem;
+    font-size: 1.2em;
+    animation: wiggle 2s ease-in-out infinite;
 }
 
 .header p {
@@ -238,6 +266,26 @@ select:focus {
 
     }
 
+}
+
+@keyframes floatTitle {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes wiggle {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-8deg);
+    }
 }
 
 .color-actions button{
