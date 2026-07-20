@@ -70,17 +70,35 @@ main {
     margin: auto;
 }
 
-section {
+.controls{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    padding:20px 24px;
+
+    background:rgba(255,255,255,.82);
+
+    border-radius:20px;
+
+    border:1px solid rgba(36,52,71,.08);
+
+    box-shadow:0 12px 28px rgba(36,52,71,.06);
+
+}
+
+.control-group {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 14px;
-    padding: 20px 24px;
-    background: rgba(255, 255, 255, 0.82);
-    border-radius: 20px;
-    border: 1px solid rgba(36, 52, 71, 0.08);
-    box-shadow: 0 12px 28px rgba(36, 52, 71, 0.06);
+    gap: 8px;
 }
 
 label {
@@ -361,4 +379,53 @@ select:focus {
 .footer-copy {
     font-size: 0.95rem;
     color: #666;
+}
+
+@media (max-width: 768px) {
+
+    .controls {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+    }
+
+    .control-group {
+
+        width: 100%;
+
+        max-width: 220px;
+
+        align-items: center;
+
+    }
+
+    .controls label {
+
+        text-align: center;
+
+        width: 100%;
+
+    }
+
+    .controls select {
+
+        width: 100%;
+
+        text-align: center;
+        
+
+    }
+
+    #generar {
+
+        width: 100%;
+
+        max-width: 220px;
+
+    }
+
 }
