@@ -54,7 +54,9 @@ https://rodrigoromero01.github.io/ProyectoM1_RodrigoRomero/
 ├── README.md
 │
 └── css
-    └── styles.css
+│    └── styles.css
+└── assets
+    └── screenshot.png
 ```
 
 ---
