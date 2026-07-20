@@ -54,9 +54,15 @@ https://rodrigoromero01.github.io/ProyectoM1_RodrigoRomero/
 ├── README.md
 │
 └── css
+│    │
 │    └── styles.css
+│
+└── images
+│     │
+│     └── fondoweb.jpg
 └── assets
-│    └── screenshot.png
+│     │
+│     └── screenshot.png
 └── docs
     └── ia-consulta-01.jpg
     └── ia-consulta-02.jpg
