@@ -1,4 +1,5 @@
                 // ===== ELEMENTOS DEL DOM  ===== //
+const selectorFormato = document.getElementById("formato");
 
 const botonGenerar = document.getElementById("generar");
 
@@ -14,6 +15,12 @@ let paleta = [];
                 // ===== EVENTOS ===== //
 
 botonGenerar.addEventListener("click", generarPaleta);
+
+selectorFormato.addEventListener("change", function () {
+
+    renderizarPaleta();
+
+});
 
   
                 // ===== FUNCIONES ===== //
@@ -138,14 +145,19 @@ function crearTarjeta(color) {
     const info = document.createElement("div");
     info.className = "color-info";
 
-    const textoHex = document.createElement("p");
-    textoHex.textContent = `HEX: ${color.hex}`;
+    const textoColor = document.createElement("p");
 
-    const textoHsl = document.createElement("p");
-    textoHsl.textContent =  `HSL: ${color.h}°, ${color.s}%, ${color.l}%`;
+    if (selectorFormato.value === "hex") {
 
-    info.appendChild(textoHex);
-    info.appendChild(textoHsl);
+        textoColor.textContent = `HEX: ${color.hex}`;
+
+    } else {
+
+        textoColor.textContent = `HSL: ${color.h}°, ${color.s}%, ${color.l}%`;
+
+}
+
+info.appendChild(textoColor);  
 
     const acciones = document.createElement("div");
     acciones.className = "color-actions";
