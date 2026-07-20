@@ -195,13 +195,20 @@ info.appendChild(textoColor);
 
     const botonCopiar = document.createElement("button");
     botonCopiar.textContent = "📋";
-    botonCopiar.title = "Copiar código HEX";
+
+    const actualizarBotonCopiar = () => {
+        const formatoActivo = selectorFormato.value === "hex" ? "HEX" : "HSL";
+        botonCopiar.title = `Copiar código ${formatoActivo}`;
+    };
+
+    actualizarBotonCopiar();
 
     botonCopiar.addEventListener("click", function () {
-        
-        navigator.clipboard.writeText(color.hex);
-        
-        mostrarToast("Código HEX copiado");
+        const codigo = selectorFormato.value === "hex" ? color.hex : color.hsl;
+        const formatoActivo = selectorFormato.value === "hex" ? "HEX" : "HSL";
+
+        navigator.clipboard.writeText(codigo);
+        mostrarToast(`Código ${formatoActivo} copiado`);
     });
 
     acciones.appendChild(botonBloquear);
