@@ -14,9 +14,10 @@ https://rodrigoromero01.github.io/ProyectoM1_RodrigoRomero/
 
 ---
 
-## 📸 Captura de pantalla
+## 📸 Captura pagina inicial y Gif de uso
 
 ![Vista previa de la página principal](assets/screenshot.png)
+![Gif de uso](assets/Animación.gif)
 
 ---
 
@@ -118,7 +119,7 @@ Durante el desarrollo de este proyecto utilicé herramientas de Inteligencia Art
 - Comprender el funcionamiento de eventos, funciones y renderizado dinámico.
 - Obtener ejemplos para implementar funcionalidades como:
     - Generación aleatoria de colores.
-    - Conversión de HSL a HEX.
+    - Conversión de HSL a HEX y viceversa.
     - Copiado del código HEX al portapapeles.
     - Bloqueo de colores.
     - Uso de localStorage.
