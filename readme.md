@@ -27,7 +27,6 @@ https://rodrigoromero01.github.io/ProyectoM1_RodrigoRomero/
 - Colores mostrados en formato HSL y HEX.
 - Copiar el código HEX al portapapeles.
 - Bloqueo y desbloqueo de colores individuales.
-- Guardado automático de la última paleta mediante LocalStorage.
 - Microfeedback mediante Toast.
 - Animaciones sutiles al generar nuevas tarjetas.
 - Diseño orientado a escritorio.
@@ -147,8 +146,7 @@ La Inteligencia Artificial fue utilizada como una herramienta de apoyo al aprend
 
 ### 📸 Evidencias del proceso
 
-Como parte del proceso de desarrollo se incluyen capturas de pantalla en la carpeta /docs, donde se observa el uso de herramientas de IA para resolver dudas, comprender conceptos, solicitar ayuda y mejorar la implementación del proyecto.
-
+Como parte del proceso de desarrollo se incluyen capturas de pantalla en la carpeta [docs](docs/), donde se observa el uso de herramientas de IA para resolver dudas, comprender conceptos, solicitar ayuda y mejorar la implementación del proyecto.
 
 **Cada sugerencia proporcionada por la IA fue analizada, adaptada y probada antes de incorporarla al proyecto. El objetivo principal fue utilizar la herramienta como apoyo para el aprendizaje y no como un reemplazo del proceso de desarrollo.**
 
